@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>linkedin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        height: 100dvh;
+        width: 100dvw;
+        background-color: blue;
+        overflow: scroll;
+        scrollbar-width: none;
+    }
+
+
+    .top {
+        height: 10dvh;
+        width: 100dvw;
+        top: 0;
+        position: absolute;
+        background-color: aqua;
+        display: flex;
+    }
+
+    .right {
+        height: auto;
+        width: 30dvw;
+        background-color: aquamarine;
+        position: absolute;
+        /* overflow-y: auto; */
+        top: 10dvh;
+        right: 0;
+        scrollbar-width: none;
+    }
+
+    .news {
+        height: 500px;
+        width: 290px;
+        background-color: aliceblue;
+        margin: 10px;
+        position: absolute;
+        border-radius: 15px;
+
+        p {
+            color: grey;
+            padding: 10px;
+        }
+
+        h3 {
+            margin-left: 10px;
+            color: grey;
+        }
+
+    }
+
+    .first {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        i {
+            margin: 5px;
+            cursor: pointer;
+        }
+    }
+
+    .second {
+        height: 50px;
+        width: 290px;
+        background-color: rgb(231, 55, 55);
+        margin-bottom: 10px;
+        cursor: pointer;
+
+    }
+
+    .showmore {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        i {
+            cursor: pointer;
+        }
+    }
+
+    .puzzle {
+        height: 100px;
+        width: 290px;
+        background-color: blue;
+    }
+
+    .p1 {
+        height: 110px;
+        width: 290px;
+        background-color: brown;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        i {
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        margin-bottom: 20px;
+
+    }
+
+    .puzzleimg {
+        height: 80px;
+        width: 80px;
+        border-radius: 20px;
+        background-color: aqua;
+        margin-left: 10px;
+        margin-top: 5px;
+        background-image: url(puzzle.png);
+        background-size: cover;
+    }
+
+    .sticky {
+        height: 200px;
+        width: 290px;
+        background-color: rgb(17, 128, 226);
+        margin: 10px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        i {
+            margin-left: 250px;
+            margin-top: 10px;
+        }
+
+        p {
+            margin-top: 30px;
+            margin-left: 2px;
+        }
+    }
+
+    .tryforfree {
+        height: 20px;
+        width: 100px;
+        border: 1px solid blue;
+        border-radius: 10px;
+        margin-top: 20px;
+
+        h9 {
+            margin-left: 13px;
+            color: blue;
+        }
+    }
+
+    .tip {
+        height: 60px;
+        width: 290px;
+        background-color: rgb(13, 29, 197);
+        margin: 10px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .try {
+        height: 40px;
+        width: 40px;
+        color: rgb(62, 61, 61);
+        background-color: rgb(192, 192, 123);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-left: 5px;
+        border-radius: 10px;
+    }
+
+    .top1 {
+        height: 10dvh;
+        width: 35%;
+        background-color: cadetblue;
+
+        i {
+            font-size: 40px;
+            margin-left: 30px;
+            color: rgb(80, 80, 198);
+        }
+
+        display: flex;
+        align-items: center;
+    }
+
+    .top2 {
+        height: 10dvh;
+        width: auto;
+        background-color: coral;
+        display: flex;
+        border-right: 1px solid black;
+    }
+
+    .top3 {
+        height: 10dvh;
+        width: 25%;
+        background-color: cornflowerblue;
+        display: flex;
+        justify-content: space-evenly;
+
+        i {
+            margin-left: 20px;
+        }
+    }
+
+    .search {
+        height: 6dvh;
+        width: 290px;
+        background-color: azure;
+        display: flex;
+        justify-self: start;
+        align-items: center;
+
+        i {
+            font-size: 15px;
+            margin-right: 10px;
+            margin-left: 10px;
+            color: black;
+        }
+
+        border-radius: 20px;
+    }
+
+    .box {
+        height: 10dvh;
+        width: 84px;
+        background-color: aquamarine;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 3px;
+
+        i {
+            margin-left: 0px;
+            margin-top: 8px;
+            margin-bottom: 3px;
+        }
+
+        h7 {
+            margin-left: 8px;
+        }
+    }
+
+    .me {
+        margin-top: 8px;
+        background-size: cover;
+        height: 20px;
+        width: 20px;
+        border-radius: 15px;
+    }
+
+    .main {
+        height: 100dvh;
+        width: 47dvw;
+        background-color: blueviolet;
+        position: absolute;
+        top: 10dvh;
+        left: 23dvw;
+        /* overflow: scroll; */
+        scrollbar-width: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main1 {
+        height: 100px;
+        width: 40dvw;
+        margin: 20px;
+        background-color: chocolate;
+    }
+
+    .one {
+        height: 60%;
+        width: 100%;
+        background-color: antiquewhite;
+        display: flex;
+        align-items: center;
+    }
+
+    .two {
+        height: 40%;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .profile {
+        height: 40px;
+        width: 40px;
+        border-radius: 30px;
+        padding: 10px;
+    }
+
+    .post {
+        height: 30px;
+        width: 200px;
+        background-color: aqua;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+
+        p {
+            margin-left: 10px;
+        }
+    }
+
+    .t1 {
+        padding: 4.5px;
+        height: 30px;
+        width: auto;
+        background-color: antiquewhite;
+        display: flex;
+        align-items: center;
+
+        h7 {
+            font-size: small;
+        }
+
+        border-radius: 10px;
+    }
+
+    .a {
+        i {
+            color: green;
+        }
+    }
+
+    .b {
+        i {
+            color: rgb(58, 58, 215);
+        }
+    }
+
+    .c {
+        i {
+            color: rgb(235, 83, 27);
+        }
+    }
+
+    .main2 {
+        height: 900px;
+        width: 40dvw;
+        margin: 20px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        background-color: aquamarine;
+    }
+
+    .likedthis {
+        font-size: 12px;
+        height: 30px;
+        width: 40dvw;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid rgb(62, 61, 61);
+    }
+
+    .prof {
+        height: 25px;
+        width: 25px;
+        border-radius: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .heading {
+        height: 60px;
+        width: 40dvw;
+        background-color: azure;
+        display: flex;
+    }
+
+    .head2 {
+        h2 {
+            font-size: 14px;
+        }
+
+        p {
+            color: grey;
+            font-size: 11.5px;
+        }
+    }
+
+    .content {
+        height: auto;
+        width: 40dvw;
+        background-color: antiquewhite;
+
+        p {
+            margin-left: 10px;
+        }
+
+        h8 {
+            margin-left: 10px;
+            color: blue;
+        }
+    }
+
+    .youtube {
+        margin-top: 10px;
+        height: 250px;
+        width: 40dvw;
+        background-color: aqua;
+        background-size: cover;
+        background-image: url(youtube.png);
+        background-size: cover;
+    }
+
+    .lastla {
+        height: 60px;
+        width: 40dvw;
+        background-color: aqua;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .mainlast {
+        height: 70%;
+        width: 25%;
+        background-color: aquamarine;
+        margin-left: 20px;
+
+        b {
+            font-size: small;
+        }
+    }
+
+    .lastlast {
+        height: 40px;
+        width: 40dvw;
+        background-color: rgb(247, 249, 248);
+        display: flex;
+        align-items: center;
+    }
+    .comment{
+        height: 30px;
+        width: 30dvw;
+        background-color: antiquewhite;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .lastprof{
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 20px;
+        width: 20px;
+        border-radius: 15px;
+    }
+    .left {
+        height: auto;
+        width: 23dvw;
+        background-color: black;
+        position: absolute;
+        top: 10dvh;
+        left: 0;
+        
+    }
+    .leftfirst{
+        margin: 10px;
+        height: 200px;
+        width: 15dvw ;
+        background-color: aqua;
+        margin-left: 70px;
+    }
+    .leftsecond{
+        padding: 10px;
+        margin: 10px;
+        height: 80px;
+        width: 13.5dvw;
+        background-color: brown;
+        margin-left: 70px;
+        h9{
+            margin-top: 20px;
+        }
+        p{
+            color: rgb(209, 208, 208);
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        
+    }
+    .lefthird{
+        height: 50px;
+        width: 13.5dvw;
+        padding: 10px;
+        background-color: aliceblue;
+        margin-left: 70px;
+        h9{
+            color: rgb(127, 126, 126);
+        }
+}
+.leftfour{
+    height: 170px;
+    width: 15dvw;
+    margin-left: 70px;
+    background-color: aqua;
+}
+.ek{
+    padding: 8px;
+    height: 20px;
+    width: 13.5dvw;
+    display: flex;
+    margin: 10px;
+    i{
+margin-right: 5px;
+    }
+}
+.imageback{
+    height: 50px;
+    width: 15dvw;
+}
+.imgprof{
+    height: 30px;
+    width: 30px;
+    margin-top:-50px;
+    margin-left: 10px;
+    border-radius: 20px;
+}
+.context{
+    b{
+        margin-left: 10px;
+    }
+    p{
+        margin-left: 10px;
+        margin-top: 10px;
+        color: rgb(173, 171, 171);
+    }
+}
+</style>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="top1">
+                <i class="fa-brands fa-linkedin"></i>
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>Search</p>
+                </div>
+            </div>
+            <div class="top2">
+                <div class="box">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    <h7>Home</h7>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-people-group"></i>
+                    <h7>Network</h7>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-suitcase"></i>
+                    <h7>Jobs</h7>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-message"></i>
+                    <h7>Messages</h7>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-bell"></i>
+                    <h7>
+                        Notifications
+                    </h7>
+                </div>
+                <div class="box">
+                    <img class="me" src="profile.png" alt="">
+                    <h7>Me</h7>
+                </div>
+            </div>
+            <div class="top3">
+                <div class="box">
+                    <i class="fa-solid fa-grip"></i>
+                    <h7>Business</h7>
+                </div>
+                <div class="box">
+                    <p>Try premium</p>
+                    <p>For 0 $</p>
+                </div>
+            </div>
+        </div>
+        <div class="left">
+            <div class="leftfirst">
+                <div class="image">
+                    <img class="imageback" src="pattern.png" alt="">
+                    <img class="imgprof" src="profile.png" alt="">
+                </div>
+                <div class="context">
+                    <b>Rohini Bittla</b>
+                    <p>Student at G Naraynamma Institute Of Technology and sciences
+                    </p>
+                    <p>Secunderabad, Telangana</p>
+                </div>
+            </div>
+            <div class="leftsecond">
+                <h9>Connections</h9>
+                <p>Connect with alumini</p>
+
+                <h8>Invitation</h8>
+            </div>
+            <div class="lefthird">
+                <h9>Unlock premium tools&Insights</h9>
+                <p>Try premium for 0$
+                </p>
+            </div>
+            <div class="leftfour">
+                <div class="ek">
+                    <i class="fa-solid fa-bookmark"></i>
+                    <h9>Save</h9>
+                </div>
+                <div class="ek">
+                    <i class="fa-solid fa-people-group"></i>
+                    <h9>Groups</h9>
+                </div>
+                <div class="ek">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <h9>Newsletters</h9>
+                </div>
+                <div class="ek">
+                    <i class="fa-regular fa-envelope-open"></i>
+                    <h9>Events</h9>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main1">
+                <div class="one">
+                    <img class="profile" src="profile.png" alt="">
+                    <div class="post">
+                        <p>Start a post</p>
+                    </div>
+                </div>
+                <div class="two">
+                    <div class="t1 a">
+                        <i class="fa-brands fa-youtube"></i>
+                        <h7>Video</h7>
+                    </div>
+                    <div class="t1 b">
+                        <i class="fa-solid fa-images"></i>
+                        <h7>Photos</h7>
+                    </div>
+                    <div class="t1 c">
+                        <i class="fa-solid fa-newspaper"></i>
+                        <h7>WriteArticle</h7>
+                    </div>
+
+                </div>
+            </div>
+            <div class="main2">
+                <div class="likedthis">
+                    <img class="prof" src="profile.png" alt="">
+                    <p>Vennela Bittla liked this</p>
+                </div>
+                <div class="heading">
+                    <img class="profile" src="profile.png" alt="">
+                    <div class="head2">
+                        <h3>Rohini Bittla</h3>
+                        <p>Student at G Narayanamma Institute of Technology</p>
+                        <p>.1d ago</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <p>🚀 My First Project – YouTube Clone!</p>
+                    <p>I’m super excited to share my first project 👉 </p>
+
+
+                    <h8>https://lnkd.in/dKQpurrr</h8>
+
+                    <p>This is a YouTube Clone I built while learning web development with WebHostDevs.</p>
+                    <p>Through this project, I learned:</p>
+                    <p>🔹 Structuring and styling layouts</p>
+                    <p>🔹 Working on responsiveness & clean UI</p>
+                    <p>🔹 Deploying a project live on the web 🌐</p>
+                    <p>It might just be a clone, but for me it’s a big milestone 🎉. Every line of code taught me
+                        something new, and I’m excited to keep learning and building more projects ahead! 💻✨</p>
+
+                    <p>Feedback is always welcome 🙌</p>
+                    <h8>#YouTubeClone#WebDevelopment
+                        #Frontend#LearningByDoing
+                        #WebHostDevs </h8>
+                </div>
+                <div class="youtube">
+                </div>
+                <div class="lastla">
+                    <div class="mainlast">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <b>Like</b>
+                    </div>
+                    <div class="mainlast">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <b>Comment</b>
+                    </div>
+                    <div class="mainlast">
+                        <i class="fa-solid fa-retweet"></i>
+                        <b>Repost</b>
+                    </div>
+                    <div class="mainlast">
+                        <i class="fa-regular fa-paper-plane"></i>
+                        <b>Send</b>
+                    </div>
+                </div>
+                <div class="lastlast">
+                    <img src="profile.png" class="lastprof" alt="">
+                    <div class="comment">
+<p>Add a comment..</p>
+<i class="fa-regular fa-face-smile"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="main2">
+                <div class="likedthis">
+                    <img class="prof" src="profile.png" alt="">
+                    <p>Vennela Bittla liked this</p>
+                </div>
+                <div class="heading">
+                    <img class="profile" src="profile.png" alt="">
+                    <div class="head2">
+                        <h3>Rohini Bittla</h3>
+                        <p>Student at G Narayanamma Institute of Technology</p>
+                        <p>.1d ago</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <p>🚀 My First Project – YouTube Clone!</p>
+                    <p>I’m super excited to share my first project 👉 </p>
+
+
+                    <h8>https://lnkd.in/dKQpurrr</h8>
+
+                    <p>This is a YouTube Clone I built while learning web development with WebHostDevs.</p>
+                    <p>Through this project, I learned:</p>
+                    <p>🔹 Structuring and styling layouts</p>
+                    <p>🔹 Working on responsiveness & clean UI</p>
+                    <p>🔹 Deploying a project live on the web 🌐</p>
+                    <p>It might just be a clone, but for me it’s a big milestone 🎉. Every line of code taught me
+                        something new, and I’m excited to keep learning and building more projects ahead! 💻✨</p>
+
+                    <p>Feedback is always welcome 🙌</p>
+                    <h8>#YouTubeClone#WebDevelopment
+                        #Frontend#LearningByDoing
+                        #WebHostDevs </h8>
+                </div>
+                <div class="youtube">
+                </div>
+                <div class="lastla">
+                    <div class="mainlast">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <b>Like</b>
+                    </div>
+                    <div class="mainlast">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <b>Comment</b>
+                    </div>
+                    <div class="mainlast">
+                        <i class="fa-solid fa-retweet"></i>
+                        <b>Repost</b>
+                    </div>
+                    <div class="mainlast">
+                        <i class="fa-regular fa-paper-plane"></i>
+                        <b>Send</b>
+                    </div>
+                </div>
+                <div class="lastlast">
+                    <img src="profile.png" class="lastprof" alt="">
+                    <div class="comment">
+<p>Add a comment..</p>
+<i class="fa-regular fa-face-smile"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="main2">
+                <div class="likedthis">
+                    <img class="prof" src="profile.png" alt="">
+                    <p>Vennela Bittla liked this</p>
+                </div>
+                <div class="heading">
+                    <img class="profile" src="profile.png" alt="">
+                    <div class="head2">
+                        <h3>Rohini Bittla</h3>
+                        <p>Student at G Narayanamma Institute of Technology</p>
+                        <p>.1d ago</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <p>🚀 My First Project – YouTube Clone!</p>
+                    <p>I’m super excited to share my first project 👉 </p>
+
+
+                    <h8>https://lnkd.in/dKQpurrr</h8>
+
+                    <p>This is a YouTube Clone I built while learning web development with WebHostDevs.</p>
+                    <p>Through this project, I learned:</p>
+                    <p>🔹 Structuring and styling layouts</p>
+                    <p>🔹 Working on responsiveness & clean UI</p>
+                    <p>🔹 Deploying a project live on the web 🌐</p>
+                    <p>It might just be a clone, but for me it’s a big milestone 🎉. Every line of code taught me
+                        something new, and I’m excited to keep learning and building more projects ahead! 💻✨</p>
+
+                    <p>Feedback is always welcome 🙌</p>
+                    <h8>#YouTubeClone#WebDevelopment
+                        #Frontend#LearningByDoing
+                        #WebHostDevs </h8>
+                </div>
+                <div class="youtube">
+                </div>
+                <div class="lastla">
+                    <div class="mainlast">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <b>Like</b>
+                    </div>
+                    <div class="mainlast">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <b>Comment</b>
+                    </div>
+                    <div class="mainlast">
+                        <i class="fa-solid fa-retweet"></i>
+                        <b>Repost</b>
+                    </div>
+                    <div class="mainlast">
+                        <i class="fa-regular fa-paper-plane"></i>
+                        <b>Send</b>
+                    </div>
+                </div>
+                <div class="lastlast">
+                    <img src="profile.png" class="lastprof" alt="">
+                    <div class="comment">
+<p>Add a comment..</p>
+<i class="fa-regular fa-face-smile"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="main2">
+                <div class="likedthis">
+                    <img class="prof" src="profile.png" alt="">
+                    <p>Vennela Bittla liked this</p>
+                </div>
+                <div class="heading">
+                    <img class="profile" src="profile.png" alt="">
+                    <div class="head2">
+                        <h3>Rohini Bittla</h3>
+                        <p>Student at G Narayanamma Institute of Technology</p>
+                        <p>.1d ago</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <p>🚀 My First Project – YouTube Clone!</p>
+                    <p>I’m super excited to share my first project 👉 </p>
+
+
+                    <h8>https://lnkd.in/dKQpurrr</h8>
+
+                    <p>This is a YouTube Clone I built while learning web development with WebHostDevs.</p>
+                    <p>Through this project, I learned:</p>
+                    <p>🔹 Structuring and styling layouts</p>
+                    <p>🔹 Working on responsiveness & clean UI</p>
+                    <p>🔹 Deploying a project live on the web 🌐</p>
+                    <p>It might just be a clone, but for me it’s a big milestone 🎉. Every line of code taught me
+                        something new, and I’m excited to keep learning and building more projects ahead! 💻✨</p>
+
+                    <p>Feedback is always welcome 🙌</p>
+                    <h8>#YouTubeClone#WebDevelopment
+                        #Frontend#LearningByDoing
+                        #WebHostDevs </h8>
+                </div>
+                <div class="youtube">
+                </div>
+                <div class="lastla">
+                    <div class="mainlast">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <b>Like</b>
+                    </div>
+                    <div class="mainlast">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <b>Comment</b>
+                    </div>
+                    <div class="mainlast">
+                        <i class="fa-solid fa-retweet"></i>
+                        <b>Repost</b>
+                    </div>
+                    <div class="mainlast">
+                        <i class="fa-regular fa-paper-plane"></i>
+                        <b>Send</b>
+                    </div>
+                </div>
+                <div class="lastlast">
+                    <img src="profile.png" class="lastprof" alt="">
+                    <div class="comment">
+<p>Add a comment..</p>
+<i class="fa-regular fa-face-smile"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="news">
+                <div class="first">
+                    <h2>Linkedin News</h2>
+                    <i class="fa-solid fa-circle-info"></i>
+                </div>
+                <p>Top Stories</p>
+                <div class="second s1">
+                    <h9>Reliance teams up with Google,Meta</h9>
+                    <p>17hrs ago .12,666 readers</p>
+                </div>
+                <div class="second s2">
+                    <h9>AI talent crunch widens</h9>
+                    <p>15hrs ago .9,608 readers</p>
+                </div>
+                <div class="second s3">
+                    <h9>India's GDP growth surges</h9>
+                    <p>14hrs ago .768 readers</p>
+                </div>
+                <div class="second s4">
+                    <h9>PE firms bet on SaaS startups</h9>
+                    <p>13hrs ago .569 readers</p>
+                </div>
+                <div class="second s5">
+                    <h9>Shoppers face a credit squeeze</h9>
+                    <p>10hrs ago .308 readers</p>
+                </div>
+                <div class="showmore">
+                    <p>Showmore</p>
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="puzzle">
+                    <h3>Today's Puzzles</h3>
+                    <div class="p1">
+                        <img class="puzzleimg" img="puzzle.png" alt="">
+                        <h8>Mini Sudoko</h8>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="sticky">
+                <i class="fa-solid fa-ellipsis"></i>
+                <p>Rohini here's a 1 month free trial of Linkedin premium</p>
+                <p>Job search easier with premium</p>
+                <div class="tryforfree">
+                    <h9>try for free</h9>
+                </div>
+            </div>
+
+            <div class="tip">
+                <div class="try">
+                    TIP
+                </div>
+                <p>Try linkedin on windows app</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
