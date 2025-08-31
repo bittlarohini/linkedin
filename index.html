@@ -15,10 +15,10 @@
         padding: 0;
     }
 
-    .container {
-        height: 100dvh;
-        width: 100dvw;
-        background-color: blue;
+    .container{
+        height: 730dvh;
+        width: auto;
+        background-color: rgb(243, 242, 239);
         overflow: scroll;
         scrollbar-width: none;
     }
@@ -29,25 +29,26 @@
         width: 100dvw;
         top: 0;
         position: absolute;
-        background-color: aqua;
+        background-color: white;
         display: flex;
     }
 
     .right {
-        height: auto;
-        width: 30dvw;
-        background-color: aquamarine;
+        height: 730dvh;
+        width: 23dvw;
+        background-color:rgb(243, 242, 239);
         position: absolute;
         /* overflow-y: auto; */
         top: 10dvh;
         right: 0;
         scrollbar-width: none;
+        margin-right: 80px;
     }
 
     .news {
         height: 500px;
         width: 290px;
-        background-color: aliceblue;
+        background-color: white;
         margin: 10px;
         position: absolute;
         border-radius: 15px;
@@ -77,35 +78,56 @@
     .second {
         height: 50px;
         width: 290px;
-        background-color: rgb(231, 55, 55);
+        background-color: rgb(255, 255, 255);
         margin-bottom: 10px;
         cursor: pointer;
 
     }
+    .second:hover {
+      background-color: rgba(212, 210, 210, 0.692);
+      .second{
+        opacity: 1;
+        transition: 0.5s all ease-in-out;
+        background-color: none;
+      }
+    }
 
     .showmore {
+        padding: 5px;
+        margin: 2px;
+        height: 30px;
+        width: 100px;
         display: flex;
         flex-direction: row;
         align-items: center;
-
+        border-radius: 10px;
         i {
             cursor: pointer;
         }
+    }
+    .showmore:hover {
+      background-color: rgba(200, 197, 197, 0.692);
+      .showmore {
+        opacity: 1;
+        transition: 0.5s all ease-in-out;
+        background-color: none;
+      }
     }
 
     .puzzle {
         height: 100px;
         width: 290px;
-        background-color: blue;
+        background-color: white;
     }
 
     .p1 {
         height: 110px;
         width: 290px;
-        background-color: brown;
+        background-color: white;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        cursor: pointer;
 
         i {
             cursor: pointer;
@@ -187,12 +209,13 @@
     .top1 {
         height: 10dvh;
         width: 35%;
-        background-color: cadetblue;
+        background-color: white;
 
         i {
             font-size: 40px;
             margin-left: 30px;
             color: rgb(80, 80, 198);
+            cursor: pointer;
         }
 
         display: flex;
@@ -202,7 +225,7 @@
     .top2 {
         height: 10dvh;
         width: auto;
-        background-color: coral;
+        background-color: white;
         display: flex;
         border-right: 1px solid black;
     }
@@ -210,7 +233,7 @@
     .top3 {
         height: 10dvh;
         width: 25%;
-        background-color: cornflowerblue;
+        background-color: white;
         display: flex;
         justify-content: space-evenly;
 
@@ -222,10 +245,11 @@
     .search {
         height: 6dvh;
         width: 290px;
-        background-color: azure;
+        background-color: white;
         display: flex;
         justify-self: start;
         align-items: center;
+        border: 0.5px solid grey ;
 
         i {
             font-size: 15px;
@@ -240,21 +264,30 @@
     .box {
         height: 10dvh;
         width: 84px;
-        background-color: aquamarine;
+        background-color: white;
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-left: 3px;
-
+        border-radius: 10px;
         i {
             margin-left: 0px;
             margin-top: 8px;
             margin-bottom: 3px;
+            cursor: pointer;
         }
 
         h7 {
             margin-left: 8px;
         }
+    }
+    .box:hover {
+      background-color: rgba(183, 179, 179, 0.692);
+      .box {
+        opacity: 1;
+        transition: 0.5s all ease-in-out;
+        background-color: none;
+      }
     }
 
     .me {
@@ -266,9 +299,9 @@
     }
 
     .main {
-        height: 100dvh;
+        height: 730dvh;
         width: 47dvw;
-        background-color: blueviolet;
+        background-color: rgb(243, 242, 239);
         position: absolute;
         top: 10dvh;
         left: 23dvw;
@@ -283,13 +316,14 @@
         height: 100px;
         width: 40dvw;
         margin: 20px;
-        background-color: chocolate;
+        background-color: white;
+        border-radius: 10px;
     }
 
     .one {
         height: 60%;
         width: 100%;
-        background-color: antiquewhite;
+        background-color: white;
         display: flex;
         align-items: center;
     }
@@ -307,26 +341,29 @@
         width: 40px;
         border-radius: 30px;
         padding: 10px;
+        cursor: pointer;
     }
 
     .post {
+        cursor: pointer;
         height: 30px;
         width: 200px;
-        background-color: aqua;
+        background-color: white;
         border-radius: 20px;
         display: flex;
         align-items: center;
-
+        border: 0.5px solid rgb(230, 226, 226);
         p {
             margin-left: 10px;
         }
     }
 
     .t1 {
+        cursor: pointer;
         padding: 4.5px;
         height: 30px;
         width: auto;
-        background-color: antiquewhite;
+        background-color: white;
         display: flex;
         align-items: center;
 
@@ -335,6 +372,14 @@
         }
 
         border-radius: 10px;
+    }
+    .t1:hover {
+      background-color: rgba(183, 179, 179, 0.692);
+      .t1 {
+        opacity: 1;
+        transition: 0.5s all ease-in-out;
+        background-color: none;
+      }
     }
 
     .a {
@@ -356,12 +401,13 @@
     }
 
     .main2 {
-        height: 900px;
+        height: 710px;
         width: 40dvw;
-        margin: 20px;
-        margin-bottom: 20px;
-        margin-top: 20px;
-        background-color: aquamarine;
+        margin: 10px;
+        margin-bottom: 10px;
+        margin-top:0px;
+        background-color: white;
+        border-radius: 10px;
     }
 
     .likedthis {
@@ -370,7 +416,8 @@
         width: 40dvw;
         display: flex;
         align-items: center;
-        border-bottom: 1px solid rgb(62, 61, 61);
+        border-bottom: 0.5px solid rgb(234, 229, 229);
+        cursor: pointer;
     }
 
     .prof {
@@ -379,13 +426,15 @@
         border-radius: 20px;
         margin-left: 10px;
         margin-right: 10px;
+        cursor: pointer;
     }
 
     .heading {
         height: 60px;
         width: 40dvw;
-        background-color: azure;
+        background-color: white;
         display: flex;
+        cursor: pointer;
     }
 
     .head2 {
@@ -402,7 +451,7 @@
     .content {
         height: auto;
         width: 40dvw;
-        background-color: antiquewhite;
+        background-color: white;
 
         p {
             margin-left: 10px;
@@ -411,6 +460,7 @@
         h8 {
             margin-left: 10px;
             color: blue;
+            cursor: pointer;
         }
     }
 
@@ -427,40 +477,52 @@
     .lastla {
         height: 60px;
         width: 40dvw;
-        background-color: aqua;
+        background-color: white;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
     }
 
     .mainlast {
+        padding: 2px;
         height: 70%;
-        width: 25%;
-        background-color: aquamarine;
+        width: 150px;
+        background-color: white;
         margin-left: 20px;
+        border-radius: 10px;
 
         b {
             font-size: small;
         }
     }
+    .mainlast:hover {
+      background-color: rgba(183, 179, 179, 0.692);
+      .mainlast {
+        opacity: 1;
+        transition: 0.5s all ease-in-out;
+        background-color: none;
+      }
+    }
 
     .lastlast {
         height: 40px;
         width: 40dvw;
-        background-color: rgb(247, 249, 248);
+        background-color: white;
         display: flex;
         align-items: center;
+        border-bottom: 0px;
     }
     .comment{
         height: 30px;
         width: 30dvw;
-        background-color: antiquewhite;
+        background-color: white;
         border-radius: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-left: 10px;
         margin-right: 10px;
+        border: 0.5px solid rgb(220, 218, 218);
     }
     .lastprof{
         margin-left: 10px;
@@ -468,11 +530,12 @@
         height: 20px;
         width: 20px;
         border-radius: 15px;
+        cursor: pointer;
     }
     .left {
-        height: auto;
-        width: 23dvw;
-        background-color: black;
+        min-height: 730dvh;
+        width: 40dvw;
+        background-color: rgb(243, 242, 239);
         position: absolute;
         top: 10dvh;
         left: 0;
@@ -482,16 +545,19 @@
         margin: 10px;
         height: 200px;
         width: 15dvw ;
-        background-color: aqua;
+        background-color: white;
         margin-left: 70px;
+        cursor: pointer;
+        border-radius: 10px;
     }
     .leftsecond{
         padding: 10px;
         margin: 10px;
         height: 80px;
         width: 13.5dvw;
-        background-color: brown;
+        background-color: white;
         margin-left: 70px;
+        cursor: pointer;
         h9{
             margin-top: 20px;
         }
@@ -500,23 +566,27 @@
             margin-top: 10px;
             margin-bottom: 20px;
         }
+        border-radius: 10px;
         
     }
     .lefthird{
         height: 50px;
         width: 13.5dvw;
         padding: 10px;
-        background-color: aliceblue;
+        background-color: white;
         margin-left: 70px;
         h9{
             color: rgb(127, 126, 126);
         }
+        cursor: pointer;
+        border-radius: 10px;
 }
 .leftfour{
     height: 170px;
     width: 15dvw;
     margin-left: 70px;
-    background-color: aqua;
+    background-color: white;
+    
 }
 .ek{
     padding: 8px;
@@ -527,10 +597,14 @@
     i{
 margin-right: 5px;
     }
+    h9{
+        cursor: pointer;
+    }
 }
 .imageback{
     height: 50px;
     width: 15dvw;
+    border-radius: 10px;
 }
 .imgprof{
     height: 30px;
@@ -538,7 +612,16 @@ margin-right: 5px;
     margin-top:-50px;
     margin-left: 10px;
     border-radius: 20px;
+    cursor: pointer;
 }
+.imgprof:hover {
+      background-color: rgba(104, 101, 101, 0.692);
+      .imgprof {
+        opacity: 1;
+        transition: 0.5s all ease-in-out;
+        background-color: none;
+      }
+    }
 .context{
     b{
         margin-left: 10px;
@@ -552,7 +635,8 @@ margin-right: 5px;
 </style>
 
 <body>
-    <div class="container">
+  <div class="container1">
+      <div class="container">
         <div class="top">
             <div class="top1">
                 <i class="fa-brands fa-linkedin"></i>
@@ -720,13 +804,13 @@ margin-right: 5px;
                         <b>Send</b>
                     </div>
                 </div>
-                <div class="lastlast">
+                <!-- <div class="lastlast">
                     <img src="profile.png" class="lastprof" alt="">
                     <div class="comment">
 <p>Add a comment..</p>
 <i class="fa-regular fa-face-smile"></i>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="main2">
                 <div class="likedthis">
@@ -781,13 +865,13 @@ margin-right: 5px;
                         <b>Send</b>
                     </div>
                 </div>
-                <div class="lastlast">
+                <!-- <div class="lastlast">
                     <img src="profile.png" class="lastprof" alt="">
                     <div class="comment">
 <p>Add a comment..</p>
 <i class="fa-regular fa-face-smile"></i>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="main2">
                 <div class="likedthis">
@@ -842,13 +926,13 @@ margin-right: 5px;
                         <b>Send</b>
                     </div>
                 </div>
-                <div class="lastlast">
+                <!-- <div class="lastlast">
                     <img src="profile.png" class="lastprof" alt="">
                     <div class="comment">
 <p>Add a comment..</p>
 <i class="fa-regular fa-face-smile"></i>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="main2">
                 <div class="likedthis">
@@ -903,13 +987,13 @@ margin-right: 5px;
                         <b>Send</b>
                     </div>
                 </div>
-                <div class="lastlast">
+                <!-- <div class="lastlast">
                     <img src="profile.png" class="lastprof" alt="">
                     <div class="comment">
 <p>Add a comment..</p>
 <i class="fa-regular fa-face-smile"></i>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="right">
@@ -971,6 +1055,7 @@ margin-right: 5px;
             </div>
         </div>
     </div>
+  </div>
 </body>
 
 </html>
